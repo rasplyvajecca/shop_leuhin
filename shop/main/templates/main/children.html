@@ -1,0 +1,13 @@
+{% extends 'main/all.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+{% for el in product %}
+    <img src={{el.image.url}} alt="">
+    <p>{{el.name}}</p>
+    <p>{{el.price}}p</p>
+{% endfor %}
+{% endblock %}
