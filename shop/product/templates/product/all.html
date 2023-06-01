@@ -7,15 +7,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'product/css/style.css' %}">
   <title>Site</title>
 </head>
 <body>
   <header><nav><ul>
     <li><a href="{% url 'all' %}">Главная</a></li>
-    <li><a href="/men/?categories=1">Мужчины</a></li>
-    <li><a href="/women/?categories=2">Женщины</a></li>
-    <li><a href="/children/?categories=3">Дети</a></li>
+    <li><a href="{% url 'men' %}?categories=1">Мужчины</a></li>
+    <li><a href="{% url 'women' %}?categories=2">Женщины</a></li>
+    <li><a href="{% url 'children' %}?categories=3">Дети</a></li>
     <li><a href="{% url 'feedback' %}">Фидбэк</a></li>
   </ul></nav></header>
   {% block content %}{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'product/all.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<p class="title">Мужчины</p>
+<div class="main">
+<div class="grid">
+{% for el in product %}
+    <div class="product">
+    <div><img src={{el.image.url}} alt=""></div>
+    <p>{{el.name}}</p>
+    <p>{{el.price|floatformat:2}}p</p>
+    </div>
+{% endfor %}
+</div>
+    </div>
+{% endblock %}

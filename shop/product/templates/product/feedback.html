@@ -1,0 +1,20 @@
+{% extends 'product/all.html' %}
+{% load static %}
+
+
+{% block content %}
+<p class="title">Фидбэк</p>
+<div class="form">
+    <form action="{% url 'create' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <input class="email" name="email" required type="email" placeholder=" Почта">
+
+            <textarea name="message" required placeholder=" Комментарий"></textarea>
+
+            <input class="submit" type="submit" value="Отправить">
+        </div>
+    </form>
+</div>
+
+{% endblock %}
